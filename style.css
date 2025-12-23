@@ -1,0 +1,106 @@
+/* Mint-themed styles for HTTP Cat Viewer */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+  --mint-1: #e6fffa;
+  --mint-2: #ccfbf1;
+  --mint-3: #99f6e4;
+  --mint-4: #2dd4bf;
+  --mint-5: #059669;
+  --glass: rgba(255,255,255,0.6);
+  --muted: #2f4f4f;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--mint-1), var(--mint-2));
+  color: var(--muted);
+}
+
+.container {
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), var(--glass));
+  padding: 32px 36px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(6,95,70,0.08);
+  text-align: center;
+  max-width: 520px;
+  width: 92%;
+  border: 1px solid rgba(5,150,105,0.08);
+}
+
+h1 {
+  color: var(--mint-5);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+p {
+  color: #27534a;
+  margin-bottom: 18px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+input[type="number"] {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(5,150,105,0.18);
+  font-size: 16px;
+  background: white;
+}
+
+button {
+  padding: 12px 18px;
+  background: linear-gradient(180deg, var(--mint-4), var(--mint-5));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms;
+  box-shadow: 0 6px 18px rgba(5,150,105,0.18);
+}
+
+button:hover { transform: translateY(-2px); }
+button:active { transform: translateY(0); }
+
+.cat-display{
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cat-display img {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 12px;
+  margin-top: 12px;
+  display: none; /* hidden until image loads */
+  object-fit: contain;
+}
+
+#errorMsg {
+  color: #b22727;
+  margin-top: 10px;
+  min-height: 1.2em;
+}
+
+@media (max-width: 420px){
+  .input-group{flex-direction: column-reverse}
+  button{width:100%}
+}

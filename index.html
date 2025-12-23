@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP Cat Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HTTP Cat Viewer 🐱</h1>
+    <p>Enter an HTTP status code to see the corresponding cat!</p>
+    
+    <div class="input-group">
+      <input type="number" id="statusCode" placeholder="e.g., 404" min="100" max="599">
+      <button id="showCat">Show Cat</button>
+    </div>
+
+    <div class="cat-display">
+      <img id="catImage" src="" alt="HTTP Cat">
+      <p id="errorMsg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
